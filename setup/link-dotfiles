@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+set -e
+
+echo "\n==========================================="
+echo "Linking dotfiles\n"
+
+RCRC=rcrc rcup -v
