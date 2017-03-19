@@ -1,0 +1,14 @@
+# OS X
+.DS_Store
+
+# Vim
+*.swp
+*.un~
+.netrwhist
+
+# Jekyll
+_site
+_drafts
+
+# MagicTags
+tags

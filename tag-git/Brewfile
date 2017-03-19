@@ -1,0 +1,4 @@
+brew "git", args: ['without-completions']
+brew "hub"
+
+brew "fzf"
