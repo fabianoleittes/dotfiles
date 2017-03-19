@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+set -e
+
+setup/install-homebrew
+setup/link-dotfiles
+
+# Find all tag-specific setup files and source them
+for file in tag-*/setup/*; do
+  source "$file"
+done
