@@ -1,6 +1,10 @@
 [user]
   name = Fabiano Leite
   email = fabianoleittes@gmail.com
+  username = fabianoleittes
 
 [github]
   user = fabianoleittes
+
+[core]
+  editor = nvim
