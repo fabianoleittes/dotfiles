@@ -1,0 +1,32 @@
+abbr --add 'g=git'
+abbr --add 'gst=git status -sb'
+abbr --add ga='git aa'
+abbr --add gpr='git pull --rebase'
+abbr --add glog="git log --graph --pretty=format:'%Cred%h%Creset %C(bold blue)%an%C(reset) - %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+abbr --add gp='git push'
+abbr --add gpf='git push -f'
+abbr --add gd='git diff'
+abbr --add gc='git commit -v'
+abbr --add gca='git commit -a -v'
+abbr --add gco='git checkout'
+abbr --add gb='git branch'
+abbr --add gs='git status -sb'
+abbr --add grc='git rebase --continue'
+abbr --add gra='git rebase --abort'
+abbr --add gri='git rebase -i origin/master'
+abbr --add gwip='git add -A && git commit -am "WIP"'
+abbr --add gfu='git fetch upstream'
+abbr --add gmu='git merge upstream/master'
+
+abbr --add grv='git remote -v'
+abbr --add grr='git remote rm'
+abbr --add grad='git remote add'
+abbr --add gnb='git checkout -b'
+
+abbr --add gsst='git stash'
+abbr --add gsp='git stash pop'
+abbr --add gsa='git stash apply'
+
+# Delete
+abbr --add db='git branch -D'
+abbr --add dbo='git push origin --delete'
