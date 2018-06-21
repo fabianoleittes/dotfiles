@@ -1,4 +1,4 @@
 EXCLUDES="README.md Brewfile setup"
-DOTFILES_DIRS="$HOME/dotfiles"
+DOTFILES_DIRS="$HOME/Dropbox/code/dotfiles"
 TAGS="git ruby fish nvim tmux"
 UNDOTTED="Library"
