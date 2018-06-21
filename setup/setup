@@ -5,7 +5,10 @@ set -e
 setup/install-homebrew
 setup/link-dotfiles
 
-# Find all tag-specific setup files and source them
-for file in tag-*/setup/*; do
-  source "$file"
+
+info "Running all setup scripts..."
+for setup in tag-*/setup; do
+  dir=$(basename "$(dirname "$setup")")
+  info "Running setup for ${dir#tag-}..."
+  . "$setup"
 done

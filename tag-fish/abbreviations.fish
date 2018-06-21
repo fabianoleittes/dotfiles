@@ -2,11 +2,6 @@
 alias e=$EDITOR
 alias v=$VISUAL
 
-abbr --add 'et=e ~/.tmux.conf'
-abbr --add 'efc=e ~/.config/fish/config.fish'
-abbr --add 'ef=e ~/.config/fish'
-
-
 abbr --add 'd=docker'
 abbr --add 'dl=docker ps -lq' # display id of latest created container
 abbr --add 'dim=docker images'

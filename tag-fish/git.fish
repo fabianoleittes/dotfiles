@@ -1,6 +1,6 @@
 abbr --add 'g=git'
 abbr --add 'gst=git status -sb'
-abbr --add ga='git aa'
+abbr --add ga='git add'
 abbr --add gpr='git pull --rebase'
 abbr --add glog="git log --graph --pretty=format:'%Cred%h%Creset %C(bold blue)%an%C(reset) - %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 abbr --add gp='git push'
