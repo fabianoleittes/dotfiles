@@ -20,6 +20,9 @@ Plug 'neomake/neomake'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-endwise'
+Plug 'kana/vim-textobj-user'
 
 " Easily copy to the system clipboard
 Plug 'christoomey/vim-system-copy'
@@ -34,3 +37,8 @@ Plug 'sheerun/vim-polyglot'
 
 " Allow to :Rename files
 Plug 'danro/rename.vim'
+
+" Lexima - Auto close parens, quotes, brackets, etc
+Plug 'cohama/lexima.vim'
+Plug 'joshdick/onedark.vim'
+Plug 'airblade/vim-gitgutter'
