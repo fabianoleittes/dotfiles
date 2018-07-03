@@ -96,8 +96,9 @@ set -g status-style bg='#44475a',fg='#f8f8f2'
 set -g message-style bg='#6272a4',fg='#f8f8f2'
 set -g message-command-style bg='#f8f8f2',fg='#6272a4'
 
+tm_tunes="#[bg=$base0D,fg=$base01] ♫ #(osascript -l JavaScript ~/Dropbox/code/dotfiles/applescripts/tunes.js)"
 set -g status-left "#[bg=#bd93f9 fg=#282a36 bold] #S #I.#P #[bg=#44475a]"
-set -g status-right "#[bg=#6272a4] %R | %d %B %Y #[bg=#44475a] #(uptime | sed 's/.*up//' | sed 's/,.*//' | sed 's/^ *//') ↑"
+set -g status-right "$tm_tunes #[bg=#6272a4] %R | %d %B %Y #[bg=#44475a] #(uptime | sed 's/.*up//' | sed 's/,.*//' | sed 's/^ *//') ↑"
 set -g window-status-format " #I #W #F "
 set -g window-status-current-style bg='#50fa7b',fg='#44475a'
 set -g window-status-current-format " #I #W #F "
