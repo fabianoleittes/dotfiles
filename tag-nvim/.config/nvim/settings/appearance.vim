@@ -10,7 +10,7 @@ set clipboard=unnamedplus
 set colorcolumn=81                " highlight the 80th column as an indicator
 set completeopt-=preview          " remove the horrendous preview window
 set cursorline                    " highlight the current line for the cursor
-set encoding=utf-8
+set encoding=UTF-8
 set expandtab                     " expands tabs to spaces
 set list                          " show trailing whitespace
 set listchars=tab:\|\ ,trail:▫
@@ -33,6 +33,4 @@ set termguicolors
 set t_Co=256
 
 let g:tagbar_autofocus = 1
-
-colorscheme dracula
-
+colorscheme onedark
