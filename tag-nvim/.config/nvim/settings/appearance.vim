@@ -32,4 +32,7 @@ set shiftwidth=2
 set termguicolors
 set t_Co=256
 
+let g:tagbar_autofocus = 1
+
 colorscheme dracula
+

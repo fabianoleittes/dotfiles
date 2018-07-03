@@ -1,32 +1,33 @@
-abbr --add 'g=git'
-abbr --add 'gst=git status -sb'
-abbr --add ga='git add'
-abbr --add gpr='git pull --rebase'
-abbr --add glog="git log --graph --pretty=format:'%Cred%h%Creset %C(bold blue)%an%C(reset) - %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
-abbr --add gp='git push'
-abbr --add gpf='git push -f'
-abbr --add gd='git diff'
-abbr --add gc='git commit -v'
-abbr --add gca='git commit -a -v'
-abbr --add gco='git checkout'
-abbr --add gb='git branch'
-abbr --add gs='git status -sb'
-abbr --add grc='git rebase --continue'
-abbr --add gra='git rebase --abort'
-abbr --add gri='git rebase -i origin/master'
-abbr --add gwip='git add -A && git commit -am "WIP"'
-abbr --add gfu='git fetch upstream'
-abbr --add gmu='git merge upstream/master'
+abbr -a git hub
+abbr -a g git
+abbr -a gst git status -sb
+abbr -a ga git add
+abbr -a gpr git pull --rebase
+abbr -a glog "git log --graph --pretty=format:\"%Cgreen%h%Creset - %Cblue%an%Creset,  %s : %ar\" --stat"
+abbr -a gp git push
+abbr -a gpf git push -f
+abbr -a gd git diff
+abbr -a gc git commit -v
+abbr -a gca git commit -a -v
+abbr -a gco git checkout
+abbr -a gb git branch
+abbr -a gs git status -sb
+abbr -a grc git rebase --continue
+abbr -a gra git rebase --abort
+abbr -a gri git rebase -i origin/master
+abbr -a gwip='git add -A && git commit -am "WIP"'
+abbr -a gfu git fetch upstream
+abbr -a gmu git merge upstream/master
 
-abbr --add grv='git remote -v'
-abbr --add grr='git remote rm'
-abbr --add grad='git remote add'
-abbr --add gnb='git checkout -b'
+abbr -a grv git remote -v
+abbr -a grr git remote rm
+abbr -a grad git remote add
+abbr -a gnb git checkout -b
 
-abbr --add gsst='git stash'
-abbr --add gsp='git stash pop'
-abbr --add gsa='git stash apply'
+abbr -a gsst git stash
+abbr -a gsp git stash pop
+abbr -a gsa git stash apply
 
 # Delete
-abbr --add db='git branch -D'
-abbr --add dbo='git push origin --delete'
+abbr -a db git branch -D
+abbr -a dbo git push origin --delete

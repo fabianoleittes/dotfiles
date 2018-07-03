@@ -7,6 +7,7 @@ alias todo="e ~/Dropbox\ \(Personal\)/todo"
 # Work
 alias code="cd ~/Dropbox/code"
 alias sc="cd ~/Dropbox/work/sciensa"
+alias alf="cd ~/Dropbox/work/sciensa/guiabolso/alfheim"
 alias bet="cd ~/Dropbox/work/survivor/survivor-appsimples"
 alias core="cd ~/Dropbox/work/survivor/core"
 alias work="cd ~/Dropbox/work"

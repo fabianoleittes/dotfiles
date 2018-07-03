@@ -6,13 +6,6 @@ bind-key -r C-s send-prefix
 # Easy reloading of the tmux.conf configuration file
 bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded"
 
-# Seamless aviation using vim-tmux-navigator (github christoomey/vim-tmux-navigator)
-# is_vim='echo "#{pane_current_command}" | grep -iqE "(^|\/)g?(view|n?vim?)(diff)?$"'
-# bind -n C-h if-shell "$is_vim" "send-keys C-h" "select-pane -L"
-# bind -n C-j if-shell "$is_vim" "send-keys C-j" "select-pane -D"
-# bind -n C-k if-shell "$is_vim" "send-keys C-k" "select-pane -U"
-# bind -n C-l if-shell "$is_vim" "send-keys C-l" "select-pane -R"
-# bind -n C-\ if-shell "$is_vim" "send-keys C-\\" "select-pane -l"
 
 is_vim="ps -o state= -o comm= -t '#{pane_tty}' \
     | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?(view|n?vim?x?)(diff)?$'"
@@ -30,11 +23,8 @@ bind-key -T copy-mode-vi C-\ select-pane -l
 # Restore clear screen keybind mapped over by tmux-navigator
 bind C-l send-keys C-l
 
-# Use 256 color mode, useful for Vim colorshemes
-# set-option -g default-terminal "screen-256color"
-#set -g default-terminal "tmux-256color"
 
-set -g default-terminal "xterm-256color"
+# set -g default-terminal "xterm-256color"
 set-option -ga terminal-overrides ",xterm-256color:Tc"
 
 # Use emacs / readline key-bindings in the tmux command prompt
@@ -60,13 +50,7 @@ bind-key b break-pane -d
 # Use vim keybindings in copy mode
 setw -g mode-keys vi
 
-# Setup 'v' to begin selection as in Vim
-#bind-key -t vi-copy v begin-selection
-#bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
 
-# Update default binding of `Enter` to also use copy-pipe
-#unbind -t vi-copy Enter
-#bind-key -t vi-copy Enter copy-pipe "reattach-to-user-namespace pbcopy"
 set-option -g default-command "reattach-to-user-namespace -l $SHELL"
 
 # Sample quick-pane configurations
@@ -75,7 +59,6 @@ bind-key t split-window -h -c ~/ "vim todo.md"
 
 # Fuzzy matching session navigation via fzf utility
 bind C-j split-window -v "tmux list-sessions | sed -E 's/:.*$//' | grep -v \"^$(tmux display-message -p '#S')\$\" | fzf --reverse | xargs tmux switch-client -t"
-# bind-key C-j choose-tree
 
 # Prompted join-pane
 bind-key j command-prompt -p "join pane from: "  "join-pane -h -s '%%'"
@@ -88,8 +71,40 @@ bind-key C-b send-keys 'tat && exit' 'C-m'
 bind-key K run-shell 'tmux switch-client -n \; kill-session -t "$(tmux display-message -p "#S")" || tmux kill-session'
 
 
+# 0 is too far away from reasonable numbers
+set -g base-index 1
+set -g renumber-windows on
+setw -g pane-base-index 1
 
-set-option -g status-left-length "50"
-set-option -g status-left "#S  "
-#set-option -g status-right " #(date '+%a, %b %d - %H:%M') "
-set-option -g status-right "#(date '+%a, %b, %d - %H:%M') | #(uptime | sed 's/.*up//' | sed 's/,.*//' | sed 's/^ *//') ↑"
+# activity
+set -g activity-action other
+set -g visual-activity on
+setw -g monitor-activity on
+set -g monitor-silence 0
+
+# enable mouse
+set -g mouse on
+
+# vim timeout problems
+set -sg escape-time 0
+
+set -g status-justify centre
+set -g status-left-length 32
+set -g status-right-length 150
+set -g status-style bg='#44475a',fg='#f8f8f2'
+
+set -g message-style bg='#6272a4',fg='#f8f8f2'
+set -g message-command-style bg='#f8f8f2',fg='#6272a4'
+
+set -g status-left "#[bg=#bd93f9 fg=#282a36 bold] #S #I.#P #[bg=#44475a]"
+set -g status-right "#[bg=#6272a4] %R | %d %B %Y #[bg=#44475a] #(uptime | sed 's/.*up//' | sed 's/,.*//' | sed 's/^ *//') ↑"
+set -g window-status-format " #I #W #F "
+set -g window-status-current-style bg='#50fa7b',fg='#44475a'
+set -g window-status-current-format " #I #W #F "
+set -g window-status-activity-style bg='#50fa7b',fg='#282a36'
+set -g window-status-separator "|"
+
+# set -g pane-border-style bg='#44475a',fg='#f8f8f2'
+# set -g pane-active-border-style bg='#6272a4',fg='#282a36'
+
+set -g mode-style bg='#6272a4',fg='#f8f8f2'

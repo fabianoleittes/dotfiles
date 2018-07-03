@@ -1,7 +1,4 @@
 " javascript
-"" Javascript Bundle
-Plug 'jelera/vim-javascript-syntax'
-Plug 'mxw/vim-jsx'
 Plug 'mattn/emmet-vim'
 
 " Handlebars / Mustache
