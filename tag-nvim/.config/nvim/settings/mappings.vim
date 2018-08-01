@@ -52,3 +52,22 @@ noremap <leader>c :bd<CR>
 "" Split
 noremap <Leader>h :<C-u>split<CR>
 noremap <Leader>v :<C-u>vsplit<CR>
+
+nnoremap <leader>sub :%s///g<left><left>
+vnoremap <leader>sub :s///g<left><left>
+nmap <leader>bi :PlugInstall<cr>
+
+" Set to show invisibles (tabs & trailing spaces) & their highlight color
+set list listchars=tab:»\ ,trail:·
+
+imap <Tab>     <Plug>(neosnippet_expand_or_jump)
+smap <Tab>     <Plug>(neosnippet_expand_or_jump)
+xmap <Tab>     <Plug>(neosnippet_expand_target)
+
+let g:dash_activate = 0
+nmap <silent> <leader>d <Plug>DashSearch
+nmap <leader>D :Dash<space>
+
+
+let g:neosnippet#enable_snipmate_compatibility = 1
+let g:neosnippet#snippets_directory='~/Users/fabianoleittes/.config/nvim/plugged/vim-snippets/snippets'
