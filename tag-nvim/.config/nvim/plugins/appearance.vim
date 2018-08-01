@@ -8,4 +8,6 @@ Plug 'vim-airline/vim-airline-themes'
 
 " Colorscheme
 Plug 'dracula/vim'
-Plug 'joshdick/onedark.vim'
+" Plug 'joshdick/onedark.vim'
+Plug 'trevordmiller/nova-vim'
+Plug 'tomasiser/vim-code-dark'
