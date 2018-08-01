@@ -1,5 +1,4 @@
 " javascript
-Plug 'mattn/emmet-vim'
 
 " Handlebars / Mustache
 Plug 'juvenn/mustache.vim'
