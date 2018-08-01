@@ -1,1 +1,0 @@
-/Users/fabianoleittes/.config/nvim/init.vim
