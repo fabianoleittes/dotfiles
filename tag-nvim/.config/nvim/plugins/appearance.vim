@@ -5,9 +5,10 @@ Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'Yggdroot/indentLine'
 
 " Colorscheme
 Plug 'dracula/vim'
-" Plug 'joshdick/onedark.vim'
+Plug 'joshdick/onedark.vim'
 Plug 'trevordmiller/nova-vim'
 Plug 'tomasiser/vim-code-dark'
