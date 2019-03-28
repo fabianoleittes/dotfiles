@@ -1,11 +1,10 @@
 # Replace C-b with C-s for the prefix key
 unbind C-b
-set -g prefix C-s
+set -g prefix C-a
 bind-key -r C-s send-prefix
 
 # Easy reloading of the tmux.conf configuration file
 bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded"
-
 
 is_vim="ps -o state= -o comm= -t '#{pane_tty}' \
     | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?(view|n?vim?x?)(diff)?$'"
@@ -22,7 +21,6 @@ bind-key -T copy-mode-vi C-\ select-pane -l
 
 # Restore clear screen keybind mapped over by tmux-navigator
 bind C-l send-keys C-l
-
 
 # set -g default-terminal "xterm-256color"
 set-option -ga terminal-overrides ",xterm-256color:Tc"
@@ -96,7 +94,7 @@ set -g status-style bg='#44475a',fg='#f8f8f2'
 set -g message-style bg='#6272a4',fg='#f8f8f2'
 set -g message-command-style bg='#f8f8f2',fg='#6272a4'
 
-tm_tunes="#[bg=$base0D,fg=$base01] ♫ #(osascript -l JavaScript ~/Dropbox/code/dotfiles/applescripts/tunes.js)"
+tm_tunes="#[bg=$base0D,fg=$base01] ♫ #(osascript -l JavaScript ~/dotfiles/applescripts/tunes.js)"
 set -g status-left "#[bg=#bd93f9 fg=#282a36 bold] #S #I.#P #[bg=#44475a]"
 set -g status-right "$tm_tunes #[bg=#6272a4] %a %m/%d/%Y %H:%M | Battery: #(pmset -g batt | grep InternalBattery | awk '{print $3}' | sed 's/;/ /g')"
 set -g window-status-format " #I #W #F "
