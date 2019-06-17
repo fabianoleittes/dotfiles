@@ -20,3 +20,5 @@ Plug 'tpope/vim-commentary', {'on': '<Plug>Commentary'}
 Plug 'mitermayer/vim-prettier', {
                         \ 'do': 'yarn install',
                         \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'html', 'graphql'] }
+
+Plug 'HerringtonDarkholme/yats.vim'
