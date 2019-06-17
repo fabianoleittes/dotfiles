@@ -18,6 +18,7 @@ abbr -a gri git rebase -i origin/master
 abbr -a gwip git add -A && git commit -am "WIP"
 abbr -a gfu git fetch upstream
 abbr -a gmu git merge upstream/master
+abbr -a gpr git pull --rebase
 
 abbr -a grv git remote -v
 abbr -a grr git remote rm
