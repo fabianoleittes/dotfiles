@@ -1,4 +1,7 @@
+" With a map leader it's possible to do extra key combinations
+" like <leader>w saves the current file
 let mapleader = "\<Space>"
+let g:mapleader = "\<Space>"
 
 function! s:SourceConfigFilesIn(directory)
   let directory_splat = '$HOME/dotfiles/tag-nvim/.config/nvim/' . a:directory . '/*'

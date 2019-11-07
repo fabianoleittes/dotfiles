@@ -22,3 +22,10 @@ Plug 'mitermayer/vim-prettier', {
                         \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'html', 'graphql'] }
 
 Plug 'HerringtonDarkholme/yats.vim'
+
+Plug 'ekalinin/Dockerfile.vim'
+
+
+
+Plug 'rhysd/git-messenger.vim'
+Plug 'mhinz/vim-startify'

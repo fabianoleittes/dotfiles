@@ -1,6 +1,7 @@
 "----------------------------------------------
 " General settings
 "----------------------------------------------
+set termguicolors
 set t_Co=256
 set laststatus=1
 set autoread                    " Automatically reread changed files without asking me anything
@@ -34,7 +35,6 @@ set showbreak=+++
 
 set rtp+=/usr/local/opt/fzf
 set shiftwidth=2
-set termguicolors
 set number
 set relativenumber
 
@@ -90,4 +90,7 @@ xnoremap <c-k> :move '<-2<CR>gv=gv
 xnoremap <c-j> :move '>+1<CR>gv=gv
 
 let g:tagbar_autofocus = 1
+
+" set background=dark
 colorscheme dracula
+" let g:palenight_terminal_italics=1

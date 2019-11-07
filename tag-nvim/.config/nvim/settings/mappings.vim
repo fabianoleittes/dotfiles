@@ -1,7 +1,11 @@
 " Mappings
 
 " Fast saving
-nnoremap <leader>, :w!<CR>
+nnoremap <leader>w :w!<cr>
+nnoremap <silent> <leader>q :q!<CR>
+
+" Remove search highlight
+nnoremap <leader>s :nohlsearch<CR>
 
 " rails shortcuts
 nnoremap <leader>rc :call system("tmux split-window -v -c '#{pane_current_path}' -p 30 'rails console'")<CR>
@@ -16,7 +20,7 @@ nnoremap <leader>pc :PlugClean<CR>
 noremap <leader>z :bp<CR>
 noremap <leader>q :bp<CR>
 noremap <leader>x :bn<CR>
-noremap <leader>w :bn<CR>
+" noremap <leader>w :bn<CR>
 
 " Split
 noremap <Leader>h :<C-u>split<CR>
@@ -42,3 +46,18 @@ nmap <leader>D :Dash<space>
 " Commentary
 map  gc  <Plug>Commentary
 nmap gcc <Plug>CommentaryLine
+
+" Quickfix and preview windows.
+nnoremap <leader>co :copen<CR>
+nnoremap <leader>cc :cclose<CR>
+nnoremap <leader>zz :pclose<CR>
+
+" Fugitive - Leader mappings.
+nnoremap <leader>ge :Gedit<CR>
+nnoremap <leader>gb :Gblame<CR>
+nnoremap <leader>gc :Gcommit<CR>
+nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>gg :Ggrep<Space>
+nnoremap <leader>gl :Glog<CR><CR><CR>:copen<CR>
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gh :Gbrowse<CR>
