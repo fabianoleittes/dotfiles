@@ -90,7 +90,3 @@ xnoremap <c-k> :move '<-2<CR>gv=gv
 xnoremap <c-j> :move '>+1<CR>gv=gv
 
 let g:tagbar_autofocus = 1
-
-" set background=dark
-colorscheme dracula
-" let g:palenight_terminal_italics=1

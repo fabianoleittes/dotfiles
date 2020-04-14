@@ -1,1 +1,0 @@
-/Users/fabianoleittes/.config/fish/nvim/init.vim

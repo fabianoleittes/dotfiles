@@ -13,3 +13,14 @@ let g:ale_fixers = {
     \   'scss': ['prettier'],
     \   'ruby': ['rubocop'],
     \}
+
+
+let g:ale_linters = {
+	\ 'go': ['gopls'],
+	\}
+
+
+" Use ALE and also some plugin 'foobar' as completion sources for all code.
+call deoplete#custom#option('sources', {
+\ '_': ['ale'],
+\})

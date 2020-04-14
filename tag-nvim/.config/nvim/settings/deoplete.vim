@@ -14,5 +14,3 @@ endfunction
 imap <Tab>     <Plug>(neosnippet_expand_or_jump)
 smap <Tab>     <Plug>(neosnippet_expand_or_jump)
 xmap <Tab>     <Plug>(neosnippet_expand_target)
-let g:neosnippet#enable_snipmate_compatibility = 1
-let g:neosnippet#snippets_directory="~/Users/fabianoleittes/.config/nvim/plugged/vim-snippets/snippets"

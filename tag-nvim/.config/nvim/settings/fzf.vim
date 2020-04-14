@@ -14,3 +14,14 @@ nnoremap <leader>gc :Files app/controllers/<cr>
 nnoremap <leader>gy :Files app/assets/stylesheets/<cr>
 nnoremap <leader>gj :Files app/assets/javascripts/<cr>
 nnoremap <leader>gs :Files spec/<cr>
+
+" Action mappings
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
+
+" Hide statusline when open fzf
+autocmd! FileType fzf
+autocmd  FileType fzf set laststatus=0 noshowmode noruler
+  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
