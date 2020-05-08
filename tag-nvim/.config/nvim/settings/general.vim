@@ -120,6 +120,9 @@ set noswapfile
 set nobackup
 set nowritebackup
 
+" Autosave buffers before leaving them
+autocmd BufLeave * silent! :wa
+
 hi CocErrorSign  ctermfg=Red guifg=#ef8189
 hi CocWarningSign  ctermfg=Brown guifg=#e8b586
 hi CocInfoSign  ctermfg=Yellow guifg=#61afef
