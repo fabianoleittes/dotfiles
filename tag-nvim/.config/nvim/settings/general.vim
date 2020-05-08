@@ -1,22 +1,44 @@
 "----------------------------------------------
 " General settings
 "----------------------------------------------
+syntax on
+filetype plugin indent on
 set termguicolors
 set t_Co=256
-set laststatus=1
-set autoread                    " Automatically reread changed files without asking me anything
+set encoding=utf8
+set laststatus=2
+" Automatically reread changed files without asking me anything
+set autoread
 set autoindent
-set backspace=indent,eol,start  " Makes backspace key more powerful.
-set incsearch                   " Shows the match while typing
+" Makes backspace key more powerful.
+set backspace=indent,eol,start
+" Shows the match while typing
+set incsearch
+" Highlight search results
 set hlsearch
+" Case insensitive searching
+set ignorecase
+" Case-sensitive if expresson contains a capital letter
+set smartcase
+" Show incomplete commands
+set showcmd
+ " Turn on line wrapping
+set nowrap
 
 " Basic vim settings
 set hidden
 set visualbell
 set number
-set nobackup
-set noswapfile
+" set nobackup
+" set noswapfile
 set noshowmode
+set signcolumn=yes
+
+" Send all vim registers to the mac clipboard
+set clipboard=unnamed
+
+" Number of undo levels
+set undolevels=1000
 
 " Set the terminal's title
 set title
@@ -27,23 +49,20 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 
-" Break lines at word
-set linebreak
+" Toggle invisible characters
+set list
+set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 
-" Wrap-broken line prefix
-set showbreak=+++
+set cmdheight=1
 
 set rtp+=/usr/local/opt/fzf
-set shiftwidth=2
 set number
 set relativenumber
+set numberwidth=5
 
 " Make it obvious where 80 characters is
 set textwidth=80
 set colorcolumn=+1
-
-" Line Wrap (number of cols)
-set textwidth=0
 
 " Highlight matching brace
 set showmatch
@@ -72,21 +91,36 @@ set lazyredraw
 " Highlight current line
 set cursorline
 
-" Activate the cursor line only during Insert mode
-set cursorline!
-autocmd InsertEnter,InsertLeave * set cul!
+" How many tenths of a second to blink
+set mat=2
 
-" Reload file with external changes on focus
-au FocusGained * :checktime
+" Switch cursor to line when in insert mode, and block when not
+set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
+    \,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
+    \,sm:block-blinkwait175-blinkoff150-blinkon175
 
 " interactive find replace preview
-set inccommand=nosplit
+if has('nvim')
+  set inccommand=split
+endif
 
-" Remove trailing whitespace on save for ruby files.
-autocmd BufWritePre *.rb,*.ex,*.exs :%s/\s\+$//e
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=50
 
-" move lines up and down in visual mode
-xnoremap <c-k> :move '<-2<CR>gv=gv
-xnoremap <c-j> :move '>+1<CR>gv=gv
+" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
 
-let g:tagbar_autofocus = 1
+" Customize completion menu
+set completeopt=noinsert,menuone,noselect
+
+" Turn Off Swap Files
+set noswapfile
+" Disable backup files
+set nobackup
+set nowritebackup
+
+hi CocErrorSign  ctermfg=Red guifg=#ef8189
+hi CocWarningSign  ctermfg=Brown guifg=#e8b586
+hi CocInfoSign  ctermfg=Yellow guifg=#61afef
+hi CocHintSign  ctermfg=Blue guifg=#56b6c2
