@@ -3,9 +3,10 @@ let g:lightline = {
  \ 'active': {
  \   'right': [['lineinfo'],
  \             ['percent'],
- \             ['coc_git_branch_status', 'fileformat', 'filetype']],
+ \             ['coc_git_branch_status', 'fileformat', 'filetype', 'cocstatus']],
  \ },
  \ 'component_function': {
+ \   'cocstatus': 'coc#status',
  \   'filetype': 'DevIconsFiletype',
  \   'fileformat': 'DevIconsFileformat',
  \   'coc_git_branch_status': 'CocGitBranchStatus'
