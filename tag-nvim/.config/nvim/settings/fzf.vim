@@ -5,7 +5,8 @@ let g:fzf_files_options =
   \ '--reverse ' .
   \ '--preview "(coderay {} || cat {}) 2> /dev/null | head -'.&lines.'"'
 nnoremap <C-p> :Files<cr>
-let $FZF_DEFAULT_COMMAND = 'ag -g "" --hidden'
+"let $FZF_DEFAULT_COMMAND = 'ag -g "" --hidden'
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 
 nnoremap <leader>ga :Files app/<cr>
 nnoremap <leader>gm :Files app/models/<cr>
