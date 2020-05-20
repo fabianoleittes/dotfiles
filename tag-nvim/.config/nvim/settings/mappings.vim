@@ -33,7 +33,7 @@ nnoremap <leader>pc :PlugClean<CR>
 " mappings used in the vim-winmode plugin.
 nnoremap <Leader>s :split<CR>
 nnoremap <Leader>v :vsplit<CR>
-nnoremap <Leader>x :close!<CR>
+" nnoremap <Leader>x :close!<CR>
 nnoremap <Leader>X :wqa!<CR>
 
 

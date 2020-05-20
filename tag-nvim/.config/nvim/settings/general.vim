@@ -49,6 +49,8 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 
+" Use one space, not two, after punctuation.
+set nojoinspaces
 " Toggle invisible characters
 set list
 set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
@@ -106,7 +108,7 @@ endif
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
-set updatetime=50
+set updatetime=300
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
