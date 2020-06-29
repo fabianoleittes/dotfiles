@@ -5,6 +5,7 @@ let g:startify_change_to_dir = 0
 " let g:startify_custom_header = [ ]
 let g:startify_relative_path = 1
 let g:startify_use_env = 1
+let g:webdevicons_enable_startify = 1
 
 function! s:StartifyListCommits()
   let git = 'git -C ' . getcwd()
@@ -32,8 +33,13 @@ let g:startify_commands = [
 let g:startify_bookmarks = [
     \ { 'c': '~/.config/nvim/init.vim' },
     \ { 'g': '~/.gitconfig' },
-    \ { 'z': '~/.zshrc' }
+    \ { 'z': '~/.zshrc' },
+    \ { 'f':  '~/dev/fabianoleittes.me' }
 \ ]
 
 autocmd User Startified setlocal cursorline
 nmap <leader>st :Startify<cr>
+
+function! StartifyEntryFormat()
+   return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
+endfunction
