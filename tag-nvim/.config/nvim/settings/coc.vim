@@ -1,3 +1,37 @@
+let g:coc_global_extensions = [
+  \ 'coc-css',
+  \ 'coc-json',
+  \ 'coc-tsserver',
+  \ 'coc-go',
+  \ 'coc-html',
+  \ 'coc-yaml',
+  \ 'coc-vimlsp',
+  \ 'coc-svg',
+  \ 'coc-lists',
+  \ 'coc-json',
+  \ 'coc-yank',
+  \ 'coc-highlight'
+  \ ]
+
+if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
+  let g:coc_global_extensions += ['coc-prettier']
+endif
+
+if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
+  let g:coc_global_extensions += ['coc-eslint']
+endif
+
+function! s:check_eslint()
+  if !isdirectory('./node_modules') || !isdirectory('./node_modules/eslint')
+    call coc#config('eslint', {
+    \ 'enable': v:false,
+    \ })
+  endif
+endfunction
+
+autocmd BufEnter *.{js,jsx,ts,tsx} :call <SID>check_eslint()
+
+
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
