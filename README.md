@@ -1,4 +1,10 @@
-# @fabianoleittes dotfiles
+<p align="center">
+  <h1 align="center">👋 @fabianoleittes's dotfiles 📚</h1>
+
+  <p align="center">
+    <img alt="Vim logo" src="https://vim.sexy/img/Vimlogo.svg" style="height: 300px; width: auto;" />
+  </p>
+</p>
 
 ![nvim startify](./screenshoot/nvim-startify.png)
 ![nvim editor](./screenshoot/nvim.png)
