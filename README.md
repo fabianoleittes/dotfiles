@@ -6,6 +6,8 @@
   </p>
 </p>
 
+## Screenshoots
+
 ![nvim startify](./screenshoot/nvim-startify.png)
 ![nvim editor](./screenshoot/nvim.png)
 
